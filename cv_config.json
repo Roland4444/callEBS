@@ -1,0 +1,41 @@
+{
+  "signal_noise": {
+    "maximum": 15,
+    "minimum": 0,
+    "enable": true
+  },
+  "duration": {
+    "maximum": 35,
+    "minimum": 0,
+    "enable": true
+  },
+  "sample_rate": {
+    "maximum": 96000,
+    "minimum": 16000,
+    "enable": true
+  },
+  "channels": {
+    "maximum": 2,
+    "minimum": 1,
+    "enable": true
+  },
+  "length": {
+    "maximum": 1500,
+    "minimum": 100,
+    "enable": true
+  },
+  "depth": {
+    "maximum": 32,
+    "minimum": 16,
+    "enable": true
+  },
+  "frequency": {
+    "maximum": 4000.0,
+    "minimum": 20.0,
+    "enable": true
+  },
+  "telephony_border": {
+    "value": 8000.0,
+    "enable": false
+  }
+}
