@@ -2,17 +2,21 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include "common.h"
+#include "JWrapper_ebs.h"
 
 #define READ_BUFFER 1024
-#define wav "./EE45AEAAD1A31B1B1A45F4B38C98BE62893E590A47C1166061B0B1C52163531C.wav"
+#define wav "./1.wav"
 typedef void (*CALL)(const char*);
 typedef bool (*BKK)(struct Session *session, const char *path_to_config);
 typedef bool (*BKKCheck)(struct Session *session, const uint8_t * content, uint64_t content_size);
 
+
 int main(void)
 {
+    char m;
     libHello();
     loadlibcv();
+    scanf("%s", &m);
     return 0;
 }
 
@@ -52,7 +56,7 @@ int loadlibcv()
     printf("create session succesfully!\n");
     uint8_t **content;
     uint8_t * direct;
-    FILE *fd = fopen("./7.wav", "rb");
+    FILE *fd = fopen(wav, "rb");
     uint64_t *content_size;
     if (fd != NULL) {
         fseek(fd, 0L, SEEK_END);
